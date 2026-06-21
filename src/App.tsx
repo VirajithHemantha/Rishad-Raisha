@@ -36,7 +36,7 @@ const googleScriptUrl = "https://script.google.com/macros/s/AKfycbyHN1BshRvxx96e
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 
-const HERO_BACKGROUND_IMAGE = `/${"WhatsApp Image 2026-06-18 at 19.27.47.jpeg".replaceAll(" ", "%20")}`;
+const HERO_BACKGROUND_IMAGE = `/${"WhatsApp Image 2026-06-21 at 02.10.46 (3).jpeg".replaceAll(" ", "%20")}`;
 const FEATURED_COUPLE_IMAGE = publicImagePath("1 (6).jpg");
 const DETAILS_BACKGROUND_IMAGE = `/${"WhatsApp Image 2026-06-18 at 19.43.18.jpeg".replaceAll(" ", "%20")}`;
 const SCHEDULE_BACKGROUND_IMAGE = `/${"WhatsApp Image 2026-06-18 at 19.38.20.jpeg".replaceAll(" ", "%20")}`;
@@ -345,11 +345,11 @@ export default function WeddingInvitation() {
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                     className="mb-12"
                   >
-                    <h2 className="font-playball text-4xl md:text-6xl text-[#8c6a1d] mb-6 drop-shadow-2xl">The Wedding of</h2>
+                    <h2 className="font-playball text-4xl md:text-6xl text-[#9d6065] mb-6 drop-shadow-2xl">The Wedding of</h2>
                     <div className="flex flex-col items-center gap-4">
-                      <span className="font-cinzel text-2xl md:text-4xl text-[#8c6a1d] tracking-[0.3em] uppercase drop-shadow-lg font-bold">{INVITATION.couple.bride}</span>
-                      <span className="font-playball text-2xl md:text-4xl text-[#8c6a1d]/80 drop-shadow-lg">&</span>
-                      <span className="font-cinzel text-2xl md:text-4xl text-[#8c6a1d] tracking-[0.3em] uppercase drop-shadow-lg font-bold">{INVITATION.couple.groom}</span>
+                      <span className="font-script text-4xl md:text-6xl text-[#9d6065] drop-shadow-lg text-center max-w-[90vw] leading-tight">{INVITATION.couple.brideFull}</span>
+                      <span className="font-script text-3xl md:text-5xl text-[#9d6065]/80 drop-shadow-lg">&</span>
+                      <span className="font-script text-4xl md:text-6xl text-[#9d6065] drop-shadow-lg text-center max-w-[90vw] leading-tight">{INVITATION.couple.groomFull}</span>
                     </div>
                   </motion.div>
 
@@ -393,7 +393,7 @@ export default function WeddingInvitation() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 2, delay: 0.8 }}
-                    className="font-playball text-4xl md:text-7xl text-[#8c6a1d] mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
+                    className="font-playball text-4xl md:text-7xl text-[#9d6065] mb-6 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]"
                   >
                     Wedding Invitation
                   </motion.h2>
@@ -401,7 +401,7 @@ export default function WeddingInvitation() {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1.5, delay: 1.2 }}
-                    className="h-1 w-32 md:w-48 bg-[#8c6a1d] mb-6"
+                    className="h-1 w-32 md:w-48 bg-[#9d6065] mb-6"
                   />
                   <motion.div
                     initial={{ opacity: 0 }}
@@ -409,9 +409,9 @@ export default function WeddingInvitation() {
                     transition={{ duration: 2, delay: 1.5 }}
                     className="flex flex-col items-center gap-4"
                   >
-                    <span className="font-cinzel text-3xl md:text-5xl text-[#8c6a1d] tracking-[0.5em] uppercase font-bold drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">{INVITATION.couple.bride}</span>
-                    <span className="font-playball text-3xl md:text-5xl text-[#8c6a1d]/80 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">&</span>
-                    <span className="font-cinzel text-3xl md:text-5xl text-[#8c6a1d] tracking-[0.5em] uppercase font-bold drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">{INVITATION.couple.groom}</span>
+                    <span className="font-script text-5xl md:text-7xl text-[#9d6065] drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] text-center max-w-[90vw] leading-tight">{INVITATION.couple.brideFull}</span>
+                    <span className="font-script text-4xl md:text-6xl text-[#9d6065]/80 drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)]">&</span>
+                    <span className="font-script text-5xl md:text-7xl text-[#9d6065] drop-shadow-[0_4px_8px_rgba(0,0,0,0.5)] text-center max-w-[90vw] leading-tight">{INVITATION.couple.groomFull}</span>
                   </motion.div>
                 </motion.div>
 
@@ -447,12 +447,10 @@ export default function WeddingInvitation() {
 
             {/* Hero Section */}
             <section className="w-full relative flex items-center justify-center overflow-hidden bg-white min-h-[85vh]">
-              {/* Floral Decorations */}
-              <img src="/images/44.png" className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 z-20 pointer-events-none opacity-90 transition-transform duration-1000" alt="" />
-              <img src="/images/f.png" className="absolute bottom-0 left-0 w-32 sm:w-48 md:w-64 z-20 pointer-events-none opacity-90 transition-transform duration-1000" alt="" />
+
 
               <div
-                className="absolute inset-0 bg-center bg-cover opacity-30"
+                className="absolute inset-0 bg-center bg-cover opacity-100"
                 style={{ backgroundImage: `url("${HERO_BACKGROUND_IMAGE}")` }}
                 aria-hidden="true"
               />
@@ -471,17 +469,28 @@ export default function WeddingInvitation() {
                   transition={{ delay: 0.15, duration: 0.8 }}
                   className="mt-10"
                 >
-                  <h1 className="font-playball text-6xl sm:text-7xl md:text-8xl text-[#9d6065] drop-shadow-md italic leading-none">
-                    {INVITATION.couple.bride}
+                  <h1 className="font-script text-6xl sm:text-7xl md:text-8xl text-[#9d6065] drop-shadow-md leading-none max-w-[90vw] mx-auto leading-tight">
+                    {INVITATION.couple.brideFull}
                   </h1>
                   <div className="mt-6 flex items-center justify-center gap-5">
                     <div className="h-px w-14 bg-[#7c4146]/40" />
-                    <span className="font-playball text-4xl md:text-5xl text-[#7c4146] drop-shadow-sm">&</span>
+                    <span className="font-script text-5xl md:text-6xl text-[#7c4146] drop-shadow-sm">&</span>
                     <div className="h-px w-14 bg-[#7c4146]/40" />
                   </div>
-                  <h1 className="mt-6 font-playball text-6xl sm:text-7xl md:text-8xl text-[#9d6065] drop-shadow-md italic leading-none">
-                    {INVITATION.couple.groom}
+                  <h1 className="mt-6 font-script text-6xl sm:text-7xl md:text-8xl text-[#9d6065] drop-shadow-md leading-none max-w-[90vw] mx-auto leading-tight">
+                    {INVITATION.couple.groomFull}
                   </h1>
+
+                  <div className="mt-10 flex justify-center w-full">
+                    <img
+                      src="/WhatsApp_Image_2026-06-21_at_02.10.40-removebg-preview.png"
+                      alt="Bismillah"
+                      className="h-10 md:h-24 object-contain drop-shadow-sm"
+                    />
+                  </div>
+                  <p className="mt-4 font-cinzel text-[10px] md:text-xs text-[#9d6065]/80 tracking-[0.2em] leading-loose max-w-xl mx-auto px-4">
+                    "In the Name of Allah, the Most Compassionate, the Most Merciful, whose blessings unite hearts and families."
+                  </p>
                 </motion.div>
 
                 <motion.div
@@ -524,6 +533,7 @@ export default function WeddingInvitation() {
               </motion.div>
             </section>
 
+
             {/* Wedding Details Section */}
             <section id="details" className="relative pt-12 md:pt-20 pb-24 md:pb-32 w-full flex flex-col items-center bg-[#eedadb]/10 overflow-hidden">
               <div
@@ -551,7 +561,7 @@ export default function WeddingInvitation() {
                   </div>
 
                   <div className="flex flex-col items-center justify-center gap-6 mb-16 max-w-3xl text-center px-4">
-                    <p className="text-[#9d6065] text-xl md:text-2xl leading-[2.5]" dir="rtl" style={{ fontFamily: 'Amiri, serif' }}>
+                    <p className="text-[#9d6065] text-xl md:text-2xl leading-[1.6] md:leading-[2]" dir="rtl" style={{ fontFamily: 'Amiri, serif' }}>
                       وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
                     </p>
                     <p className="font-cinzel text-[10px] md:text-xs text-[#9d6065]/80 tracking-[0.2em] leading-loose">
@@ -559,6 +569,9 @@ export default function WeddingInvitation() {
                     </p>
                     <p className="text-[#9d6065] text-lg md:text-xl leading-[2]" dir="rtl" style={{ fontFamily: 'Amiri, serif' }}>
                       فِي الدُّنْيَا وَالْآخِرَةِ
+                    </p>
+                    <p className="font-cinzel text-[10px] md:text-xs text-[#9d6065]/80 tracking-[0.2em] leading-loose">
+                      "May our love, faith, and companionship flourish in this world and the Hereafter"
                     </p>
                   </div>
 
@@ -572,7 +585,7 @@ export default function WeddingInvitation() {
                     <div className="space-y-4 mb-8">
                       <p className="font-cinzel text-[11px] md:text-sm tracking-[0.4em] mb-2 uppercase font-bold">With the Blessings of</p>
                       <div className="flex flex-col items-center justify-center gap-2">
-                        <span className="text-sm md:text-base font-cinzel tracking-wider text-stone-700">Mr. M.K.M Kabeer & K.M Razan</span>
+                        <span className="text-sm md:text-base font-cinzel tracking-wider text-stone-700">Mr & Mrs. M.K.M. Kabeer & K.M. Razan</span>
                       </div>
                     </div>
 
