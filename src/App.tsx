@@ -19,20 +19,18 @@ const INVITATION = {
     reception: "12:30 PM",
   },
   venue: {
-    name: "Ambalantota",
-    city: "Ambalantota",
-    mapQuery: "Ambalantota",
+    name: "Green Lagoona",
+    city: "Ambalantota, Hambantota",
+    mapQuery: "Green Lagoona, Ambalantota",
     googleMapsLink: "https://maps.app.goo.gl/tjJzDad2BvbCsGHn9?g_st=iw",
   },
   rsvpContacts: [
-    "Raisha: ",
-    "Rishad: ",
-    "Family: ",
+    "RISHAD & RAISHA : 0770880317",
   ],
 } as const;
 
 const backgroundMusic = "/Wedding Nasheed - Muhammad Al Muqit.mp3";
-const googleScriptUrl = "https://script.google.com/macros/s/AKfycbyHN1BshRvxx96eATyW9C0rtkaNFXAoNAe9lh0TiO1uJ-eKzlwXTKglqTUSz5ZH-CoKqA/exec";
+const googleScriptUrl = "https://script.google.com/macros/s/AKfycbxnSFSaqtaiB8PEwXS-CWSCzsdt3D_c7o-8KK33X9q-B45I4IBtU30ZjiNUZgK4qb8n/exec";
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 
@@ -209,13 +207,16 @@ export default function WeddingInvitation() {
       throw new Error("Google Script URL is not configured");
     }
 
-    const response = await fetch(googleScriptUrl, {
-      method: "POST",
-      body: new URLSearchParams(payload),
-    });
-
-    if (!response.ok) {
-      throw new Error("Request failed");
+    try {
+      await fetch(googleScriptUrl, {
+        method: "POST",
+        mode: "no-cors",
+        body: new URLSearchParams(payload),
+      });
+      // With no-cors, we get an opaque response so we can't check response.ok
+      // If it didn't throw a network error, we assume it succeeded
+    } catch (error) {
+      throw new Error("Request failed: " + error);
     }
   };
 
@@ -622,7 +623,7 @@ export default function WeddingInvitation() {
                     <div className="space-y-5 mb-10">
                       <div className="flex flex-col items-center gap-2">
                         <span className="text-[9px] uppercase tracking-[0.6em] font-bold text-[#9d6065]/50">Bride</span>
-                        <h3 className="text-5xl md:text-7xl font-playball text-[#bd8186] leading-none">{INVITATION.couple.bride}</h3>
+                        <h3 className="text-5xl md:text-7xl font-playball text-black leading-none">{INVITATION.couple.brideFull}</h3>
                       </div>
                     </div>
 
@@ -638,7 +639,7 @@ export default function WeddingInvitation() {
                     <div className="space-y-5 mt-10">
                       <div className="flex flex-col items-center gap-2">
                         <span className="text-[9px] uppercase tracking-[0.6em] font-bold text-[#9d6065]/50">Groom</span>
-                        <h3 className="text-5xl md:text-7xl font-playball text-[#bd8186] leading-none">{INVITATION.couple.groom}</h3>
+                        <h3 className="text-5xl md:text-7xl font-playball text-black leading-none">{INVITATION.couple.groomFull}</h3>
                       </div>
                     </div>
 
