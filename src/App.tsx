@@ -1027,7 +1027,11 @@ export default function WeddingInvitation() {
                             setRsvpForm((prev) => ({ ...prev, guests: "1" }));
                           }}
                           aria-pressed={rsvpForm.guests !== "0"}
-                          className="w-full bg-[#f3f3f3] hover:bg-slate-200 text-slate-700 py-5 md:py-6 rounded-xl font-cinzel text-[11px] md:text-sm tracking-wide transition-all shadow-sm flex items-center justify-center px-4 leading-relaxed active:scale-[0.98]"
+                          className={`w-full py-5 md:py-6 rounded-xl font-cinzel text-[11px] md:text-sm tracking-wide transition-all flex items-center justify-center px-4 leading-relaxed active:scale-[0.98] ${
+                            rsvpForm.guests !== "0"
+                              ? "bg-[#9d6065] text-white shadow-md font-bold"
+                              : "bg-[#f3f3f3] hover:bg-slate-200 text-slate-700 shadow-sm"
+                          }`}
                         >
                           Yes, I'll be there!
                         </button>
@@ -1039,7 +1043,11 @@ export default function WeddingInvitation() {
                             setRsvpForm((prev) => ({ ...prev, guests: "0" }));
                           }}
                           aria-pressed={rsvpForm.guests === "0"}
-                          className="w-full bg-[#f3f3f3] hover:bg-slate-200 text-slate-700 py-5 md:py-6 rounded-xl font-cinzel text-[11px] md:text-sm tracking-wide transition-all shadow-sm flex items-center justify-center px-4 leading-relaxed active:scale-[0.98]"
+                          className={`w-full py-5 md:py-6 rounded-xl font-cinzel text-[11px] md:text-sm tracking-wide transition-all flex items-center justify-center px-4 leading-relaxed active:scale-[0.98] ${
+                            rsvpForm.guests === "0"
+                              ? "bg-[#9d6065] text-white shadow-md font-bold"
+                              : "bg-[#f3f3f3] hover:bg-slate-200 text-slate-700 shadow-sm"
+                          }`}
                         >
                           Sadly I can't attend, but you're in my heart
                         </button>
