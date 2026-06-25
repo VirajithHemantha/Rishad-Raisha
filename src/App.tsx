@@ -459,9 +459,9 @@ export default function WeddingInvitation() {
                 <motion.p
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-[10px] md:text-xs uppercase tracking-[0.6em] font-bold text-[#7c4146] drop-shadow-sm"
+                  className="text-[10px] md:text-xs tracking-[0.6em] font-bold text-[#7c4146] drop-shadow-sm"
                 >
-                  Wedding Invitation
+                  Wedding invitation
                 </motion.p>
 
                 <motion.div
@@ -489,8 +489,8 @@ export default function WeddingInvitation() {
                       className="h-10 md:h-24 object-contain drop-shadow-sm"
                     />
                   </div>
-                  <p className="mt-4 font-cinzel text-[10px] md:text-xs text-[#9d6065]/80 tracking-[0.2em] leading-loose max-w-xl mx-auto px-4">
-                    "In the Name of Allah, the Most Compassionate, the Most Merciful, whose blessings unite hearts and families."
+                  <p className="mt-4 font-serif text-base md:text-sm text-[#9d6065]/80 leading-loose max-w-xl mx-auto px-4">
+                    "In the name of Allah, the most compassionate, the most merciful, whose blessings unite hearts and families."
                   </p>
                 </motion.div>
 
@@ -503,7 +503,7 @@ export default function WeddingInvitation() {
                   <p className="font-cinzel text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold text-[#7c4146] drop-shadow-sm">
                     {INVITATION.date.displayLong} · {INVITATION.time.reception}
                   </p>
-                  <p className="text-[#7c4146] text-xs md:text-sm tracking-[0.15em] font-bold font-cinzel leading-loose max-w-2xl mx-auto drop-shadow-sm">
+                  <p className="text-[#7c4146] text-base md:text-sm font-bold font-serif leading-loose max-w-2xl mx-auto drop-shadow-sm">
                     Together with our families, we request the honour of your presence as we celebrate our wedding.
                   </p>
 
@@ -565,13 +565,13 @@ export default function WeddingInvitation() {
                     <p className="text-[#9d6065] text-xl md:text-2xl leading-[1.6] md:leading-[2]" dir="rtl" style={{ fontFamily: 'Amiri, serif' }}>
                       وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
                     </p>
-                    <p className="font-cinzel text-[10px] md:text-xs text-[#9d6065]/80 tracking-[0.2em] leading-loose">
+                    <p className="font-serif text-base md:text-xs text-[#9d6065]/80 leading-loose">
                       "And of His signs is that He created for you from yourselves mates that you may find tranquility in them; and He placed between you affection and mercy. Indeed in that are signs for a people who give thought."
                     </p>
                     <p className="text-[#9d6065] text-lg md:text-xl leading-[2]" dir="rtl" style={{ fontFamily: 'Amiri, serif' }}>
                       فِي الدُّنْيَا وَالْآخِرَةِ
                     </p>
-                    <p className="font-cinzel text-[10px] md:text-xs text-[#9d6065]/80 tracking-[0.2em] leading-loose">
+                    <p className="font-serif text-base md:text-xs text-[#9d6065]/80 leading-loose">
                       "May our love, faith, and companionship flourish in this world and the Hereafter"
                     </p>
                   </div>
@@ -584,17 +584,17 @@ export default function WeddingInvitation() {
 
                   <div className="text-[#9d6065] space-y-4">
                     <div className="space-y-4 mb-8">
-                      <p className="font-cinzel text-[11px] md:text-sm tracking-[0.4em] mb-2 uppercase font-bold">With the Blessings of</p>
+                      <p className="font-serif text-lg md:text-sm mb-2 font-bold">With the Blessings of</p>
                       <div className="flex flex-col items-center justify-center gap-2">
-                        <span className="text-sm md:text-base font-cinzel tracking-wider text-stone-700">Mr & Mrs. M.K.M. Kabeer & K.M. Razan</span>
+                        <span className="text-base font-serif text-stone-700">Mr & Mrs. M.K.M. Kabeer & K.M. Razan</span>
                       </div>
                     </div>
 
-                    <p className="text-[10px] md:text-[13px] tracking-[0.2em] md:tracking-[0.4em] uppercase font-medium leading-loose max-w-3xl border-t border-b border-[#eedadb]/50 py-6">
+                    <p className="font-serif text-base md:text-[13px] font-medium leading-loose max-w-3xl border-t border-b border-[#eedadb]/50 py-6">
                       With hearts full of love, we request the honour of the presence of<br />
-                      <span className="text-[#bd8186] font-bold text-xs md:text-sm my-2 block">Our Honored Guests</span>
+                      <span className="text-[#bd8186] font-bold text-lg md:text-sm my-2 block">Our Honored Guests</span>
                       to celebrate the joyous marriage of our children<br />
-                      <span className="text-[#bd8186] font-bold text-base md:text-xl my-2 block font-playball">{INVITATION.couple.brideFull} & {INVITATION.couple.groomFull}</span>
+                      <span className="text-[#bd8186] text-xl my-2 block font-playball">{INVITATION.couple.brideFull} & {INVITATION.couple.groomFull}</span>
                     </p>
                   </div>
                 </motion.div>
@@ -623,7 +623,7 @@ export default function WeddingInvitation() {
                     <div className="space-y-5 mb-10">
                       <div className="flex flex-col items-center gap-2">
                         <span className="text-[9px] uppercase tracking-[0.6em] font-bold text-[#9d6065]/50">Bride</span>
-                        <h3 className="text-5xl md:text-7xl font-playball text-black leading-none">{INVITATION.couple.brideFull}</h3>
+                        <h3 className="text-5xl md:text-7xl font-playball text-[#9d6065] leading-none">{INVITATION.couple.brideFull}</h3>
                       </div>
                     </div>
 
@@ -639,7 +639,7 @@ export default function WeddingInvitation() {
                     <div className="space-y-5 mt-10">
                       <div className="flex flex-col items-center gap-2">
                         <span className="text-[9px] uppercase tracking-[0.6em] font-bold text-[#9d6065]/50">Groom</span>
-                        <h3 className="text-5xl md:text-7xl font-playball text-black leading-none">{INVITATION.couple.groomFull}</h3>
+                        <h3 className="text-5xl md:text-7xl font-playball text-[#9d6065] leading-none">{INVITATION.couple.groomFull}</h3>
                       </div>
                     </div>
 
